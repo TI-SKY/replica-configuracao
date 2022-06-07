@@ -45,6 +45,6 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 
 ![dash_reserva](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_replica.jpg?raw=true)
 
-> No exemplo, foi utilizado um server linux, por isso a pasta está como /sky/replica/financeiro, pois foi montada do server principal. Caso fosse linux, está pasta estaria em um caminho de rede como \\ip_server_principal\sky\replica$\financeiro
+> No exemplo, foi utilizado um server linux, por isso a pasta está como /sky/replica/financeiro, pois foi montada do server principal. Caso fosse windows, está pasta estaria em um caminho de rede como \\ip_server_principal\sky\replica$\financeiro
 
 
