@@ -38,12 +38,13 @@ firewall-cmd --add-service=nfs --permanent && firewall-cmd --reload
 Após isso será necessário definir as permissões no arquivo /etc/exports, da máquina que poderá se conectar com a local. Esse arquivo deve ser
 alterado no **servidor principal**, já que a montagem será feito no réplica.
 
-NO SERVER **PRINCIPAL**:
+## NO SERVER **PRINCIPAL**:
+Vamos configurar o nfs, permitindo que o server reserva acesse uma pasta no server principal.
+
 ```bash
 vim /etc/exports
 ```
 
-## NO SERVER **PRINCIPAL**
 Inclua a seguinte linha:
 ```bash
 /sky/replica/ 192.168.0.214(rw,async,no_subtree_check)
