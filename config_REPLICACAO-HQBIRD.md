@@ -1,5 +1,7 @@
 # CONFIGURAR REPLICAÇÃO NO HQBIRD
 
+HÁ UM VÍDEO DISPONÍVEL NO YOUTUBE COM O PASSO A PASSA DA CONFIGURAÇÃO. [ACESSE AQUI!](https://www.youtube.com/watch?v=GdzeRQxoDgE)
+
 > Para configurar a replicação, o server de **replica** precisa ter acesso a pasta do **Log arquive directory** que fica no server principal.
 > No windows, basta compartilhar diretamente, no linux pode-se usar nfs e montar a pasta no reserva.
 > Ambos os cenários tem passo a passo nesse repositório, basta acessar o arquivo correspondente.
