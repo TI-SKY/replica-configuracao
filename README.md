@@ -39,10 +39,34 @@ Você pode clicar em **View open databases** para verificar os bancos que estão
 
 Após adicionados, os bancos aparecerão assim no dashboard.
 
+![dash_db](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/dash_databases.png?raw=true)
+
+### Os bancos para serem registrados são os bancos dos sistemas:
+- notar
+- notarlivros
+- protesto
+- imoveis
+- ted
+- civil
+- auditoria
+- financeiro
+
+e os últimos bancos de imagens 
+- skyimagens
+- tedimagens 
+ > **INFO:** NÃO HÁ A NECESSIDADE DE REPLICAR TODOS OS BANCOS DE IMAGENS, POIS O SISTEMA ADICIONA IMAGENS APENAS NO ÚLTIMO
+ > Podemos configurar o sistema imoveis para não utilizar o banco imagens, utilizando somente o skyimagens. O mesmo vale para o protesto, que pode não utilizar o imgprotesto, apenas o skyimagens.
+
+E, caso possua, os bancos a seguir:
+- skywebshield
+- skysigner
+- skylivros 
+- skywebmonitor (ou skymonitor). 
 
 
-Os bancos para serem registrados são os bancos dos sistemas (notar, notarlivros, protesto, imoveis, ted, civil e auditoria) e os últimos bancos de imagens (skyimagens, imagens, tedimagens, imgprotesto). Assim como o banco financeiro e, caso possua, os bancos skywebshield, skysigner, skylivros e skywebmonitor (ou skymonitor). - NÃO HÁ A NECESSIDADE DE REPLICAR TODOS OS BANCOS DE IMAGENS, POIS O SISTEMA ADICIONA IMAGENS APENAS NO ÚLTIMO
 Como será configurada a replicação, é aconselhável ativar o log da replicação, caso ele não esteja ativo. Para isso, clique na engrenagem em Replication Log (ou log de replicação) e marque a opção enable (ou habilitar). Ative nos dois servidores.
-Toda a base de dados deve ser copiada para o servidor reserva, porém os bancos que serão replicados, que foram informados acima, devem ser copiados através do hqbird, com o uso da ferramenta Reinitialize replica database, que será explicada nos procedimentos de configuração a seguir.
+
+
+> **INFO:** Toda a base de dados deve ser copiada para o servidor reserva, porém os bancos que serão replicados, que foram informados acima, devem ser copiados através do hqbird, com o uso da ferramenta Reinitialize replica database, que será explicada nos procedimentos de configuração.
 
 fonte: [HQbird 2022 User Guide](https://ib-aid.com/download/docs/hqbirduserguide/userguide.html?v=4#_hqbird_enterprise_config)
