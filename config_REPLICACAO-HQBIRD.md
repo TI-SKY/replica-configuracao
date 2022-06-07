@@ -18,6 +18,8 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 6. Clique em Find and exclude tables without Primary or Unique keys e salve a configuração informada
 7. Salve as configurações
 
+![dash_principal](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_master.jpg?raw=true)
+
 > A partir daqui, a replicação está configurada, mas ainda **não estará replicando**.
 > Para efetivar essas configurações, é necerráio reiniciar o serviço do firebird no server principal. Para isso, o sistema não pode estar em uso.
 > Você pode configurar todos os bancos antes de reiniciar o firebird.
@@ -26,6 +28,7 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 8. Clique no botão de replicação novamente
 9. Clique em Reinitialize replica database e escolha a pasta para salvar a cópia do banco.
 10. Mova a cópia do banco para a pasta dados do servidor reserva
+![dash_principal_reinitialize](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_master_copia.jpg?raw=true)
 
 ### No dashboard do RESERVA
 11. Acesse o dashboard do hqbird do server **RESERVA** utilizando seu navegador de escolha no endereço ip_do_servidor:8082
@@ -39,6 +42,7 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 19. Verifique o consumo dos arquivos na pasta Log directory
 20. PRONTO
 
+![dash_reserva](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_replica.jpg?raw=true)
 
 
 
