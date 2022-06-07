@@ -23,6 +23,8 @@ services.msc
 6. Coloque um usuário com privilégios de admin 
 7. Reinicie o serviço para efetivar
 
+![services](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/services.jpg?raw=true)
+
 ## Compartilhando uma pasta
 
 Sugerimos o compartilhamento oculto
@@ -34,3 +36,5 @@ Sugerimos o compartilhamento oculto
 5. Em nome do compartilhamento coloque: **replica$**
 6. Em permissão tenha certeza que usuário **todos** possa ler/escrever
 7. Acesse o server reserva e verifique se o compartilhamento está acessível: \\\ip_do_principal\replica$
+
+![share](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/compartilhamentoo.jpg?raw=true)
