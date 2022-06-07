@@ -1,6 +1,6 @@
 # CONFIGURAR REPLICAÇÃO NO HQBIRD
 
-> Para configurar a replicação, o server de **replica** precisa ter acesso a pasta do **Log directory** que fica no server principal.
+> Para configurar a replicação, o server de **replica** precisa ter acesso a pasta do **Log arquive directory** que fica no server principal.
 > No windows, basta compartilhar diretamente, no linux pode-se usar nfs e montar a pasta no reserva.
 > Ambos os cenários tem passo a passo nesse repositório, basta acessar o arquivo correspondente.
 
@@ -43,7 +43,6 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 20. PRONTO
 
 ![dash_reserva](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_replica.jpg?raw=true)
-
-
+> No exemplo, foi utilizado um server linux, por isso a pasta está como /sky/replica/financeiro, pois foi montada do server principal. Caso fosse linux, está pasta estaria em um caminho de rede como \\ip_server_principal\sky\replica$\financeiro
 
 
