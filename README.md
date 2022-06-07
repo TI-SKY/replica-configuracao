@@ -11,7 +11,7 @@ Abaixo podemos ver a estrutura das pastas, onde o firebird MASTER copia as infor
 
 Se a replicação estiver funcionando corretamente estas pastas vão estar com apenas UM arquivo. Percebe-se que a pasta do banco notar está com dois arquivos. Isso se deve ao fato de que o serviço primeiro copia o arquivo **.arch** e depois extrai as informações para o arquivo {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}. Assim que as informações são extraídas ele exclui o arquivo **.arch**, mantendo apenas o outro arquivo na pasta.
 
-## REGISTRANDO UM BANCO NO HQBIRD
+### REGISTRANDO UM BANCO NO HQBIRD
 
 Para acessar o hqbird abra um navegador web (chrome, firefox, etc) e digite o ip ou hostname do servidor e conecte na porta 8082. Se estiver acessando do próprio servidor:
 - ip_do_servidor:8082
@@ -41,7 +41,7 @@ Após adicionados, os bancos aparecerão assim no dashboard.
 
 ![dash_db](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/dash_databases.png?raw=true)
 
-### Os bancos para serem registrados são os bancos dos sistemas:
+## Os bancos para serem registrados são os bancos dos sistemas:
 - notar
 - notarlivros
 - protesto
@@ -68,5 +68,6 @@ Como será configurada a replicação, é aconselhável ativar o log da replica�
 
 
 > **INFO:** Toda a base de dados deve ser copiada para o servidor reserva, porém os bancos que serão replicados, que foram informados acima, devem ser copiados através do hqbird, com o uso da ferramenta Reinitialize replica database, que será explicada nos procedimentos de configuração.
+> A cópia pode ser feito diretamenta da base, ou de um backup completo recente.
 
 fonte: [HQbird 2022 User Guide](https://ib-aid.com/download/docs/hqbirduserguide/userguide.html?v=4#_hqbird_enterprise_config)
