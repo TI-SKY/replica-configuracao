@@ -17,7 +17,9 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 3. Marque a opção MASTER
 4. Marque a opção ASSINCRONA
 5. Informe o caminho das pastas Log directory e Log archive directory
+> Lembre que Log archive directory é a pasta compartilhada na rede
 6. Clique em Find and exclude tables without Primary or Unique keys e salve a configuração informada
+> Essa opção procura por tabelas sem chave primária (PK), caso haja alguma, o programa informará quais e preencherá o campo automaticamente. Se não houver nenhuma aparecerá a mensagem "Everything is fine! There are no tables without PK and Unique constraint in this database." O HQ não replica tabelas sem PK.
 7. Salve as configurações
 
 ![dash_principal](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_master.jpg?raw=true)
