@@ -11,8 +11,8 @@ NO SERVER **REPLICA**:
 ```bash
 mkdir -m 777 /sky/replica
 ```
-A pasta **replica** será disponibilizada na rede, nela será armazenado os arquivos do **Log Directory**.
-A pasta **replicatemp** não precisa estar disponível na rede e armazenará os arquivos do **Log arquive Directory**.
+A pasta **replica** será disponibilizada na rede, nela será armazenado os arquivos do **Log arquive Directory**.
+A pasta **replicatemp** não precisa estar disponível na rede e armazenará os arquivos do **Log Directory**.
 
 
 ## PROCEDIMENTOS PARA COMPARTILHAMENTO DE PASTAS NO LINUX
