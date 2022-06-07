@@ -28,6 +28,7 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 8. Clique no botão de replicação novamente
 9. Clique em Reinitialize replica database e escolha a pasta para salvar a cópia do banco.
 10. Mova a cópia do banco para a pasta dados do servidor reserva
+
 ![dash_principal_reinitialize](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_master_copia.jpg?raw=true)
 
 ### No dashboard do RESERVA
@@ -43,6 +44,7 @@ Você também precisará acessar o dashboard do hqbird **RESERVA**.
 20. PRONTO
 
 ![dash_reserva](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/replica_bash_replica.jpg?raw=true)
+
 > No exemplo, foi utilizado um server linux, por isso a pasta está como /sky/replica/financeiro, pois foi montada do server principal. Caso fosse linux, está pasta estaria em um caminho de rede como \\ip_server_principal\sky\replica$\financeiro
 
 
