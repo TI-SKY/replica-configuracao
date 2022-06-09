@@ -76,7 +76,7 @@ fonte: [HQbird 2022 User Guide](https://ib-aid.com/download/docs/hqbirduserguide
 
 
 
-#Requisitos clientes de replicação
+# Requisitos clientes de replicação
 
 Sistema operacional atualizado e original
 Linux (Ubuntu 20.04 Server LTS) Ubuntu 22 ainda está homologado.
