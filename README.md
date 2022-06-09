@@ -73,3 +73,17 @@ Como será configurada a replicação, é aconselhável ativar o log da replica�
 > A cópia pode ser feito diretamenta da base, ou de um backup completo recente.
 
 fonte: [HQbird 2022 User Guide](https://ib-aid.com/download/docs/hqbirduserguide/userguide.html?v=4#_hqbird_enterprise_config)
+
+
+
+#Requisitos clientes de replicação
+
+Sistema operacional atualizado e original
+Linux (Ubuntu 20.04 Server LTS) Ubuntu 22 ainda está homologado.
+Windows (Windows Server 2016 ou superior)
+Rede /1000 (Giga) em ambos servidores (estável)
+Possuir um responsável técnico pela infraestrutura com contrato
+A máquina principal deve ser obrigatoriamente um servidor
+Armazenamento em Raid de redundância (1 ou 10)
+Manter servidor ligado 24x7 (nobreak)
+Acesso fixo ao servidor principal e reserva para Suporte TI
