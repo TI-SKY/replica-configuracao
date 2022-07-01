@@ -76,6 +76,9 @@ Como será configurada a replicação, é aconselhável ativar o log da replica�
 
 # PROCEDIMENTOS PARA UTILIZAÇÃO DO SERVER RÉPLICA COMO SERVER PRINCIPAL
 
+O procedimento é como se fosse o processo de migração, mas você já terá o novo servidor configurado e com os dados atuais.
+Confira os passos abaixo.
+
 ## Remover o atributo réplica dos bancos de dados.
 		
 Após confirmada a queda e inoperabilidade do servidor principal, os bancos que estão na máquina de réplica serão usados pelos programas sky. Para isso eles não podem mais operar como réplica, deve-se então executar o comando `gfix -replica {} ‘nomedobanco’ -user ‘usuario banco de dados’ -password ‘senha do banco de dados’` e o comando `gstat -h ‘nomedobanco’` para confirmação. Após isso os bancos estarão prontos para uso.
@@ -83,7 +86,9 @@ Após confirmada a queda e inoperabilidade do servidor principal, os bancos que 
 
 ## Alteração dos caminhos dos bancos de dados e diretórios de imagens
 
-É necessária a alteração do caminho dos bancos de dados, informando agora o IP do servidor de réplica e o diretórios em que se encontram os bancos de dados e diretórios de imagens. É importante verificar em cada situação a viabilidade de fazer a alteração manualmente em cada estação de trabalho ou simplesmente alterar o IP do servidor de réplica para o mesmo do servidor principal, observando também o diretório e o caminho dos bancos de dados. Este passo requer muita atenção para que não haja nenhuma conexão equivocada com os bancos no servidor principal, enquanto o mesmo não seja avaliado como apto para retornar a operar novamente, e garantia de que todos os programas estejam acessando o servidor replicado.
+É necessária a alteração do caminho dos bancos de dados, informando agora o IP do servidor de réplica e o diretórios em que se encontram os bancos de dados e diretórios de imagens. 
+
+É importante verificar em cada situação a viabilidade de fazer a alteração manualmente em cada estação de trabalho ou simplesmente alterar o IP do servidor de réplica para o mesmo do servidor principal, observando também o diretório e o caminho dos bancos de dados. Este passo requer muita atenção para que não haja nenhuma conexão equivocada com os bancos no servidor principal, enquanto o mesmo não seja avaliado como apto para retornar a operar novamente, e garantia de que todos os programas estejam acessando o servidor replicado.
 
 
 ## Remover o atributo de replicação em lote
