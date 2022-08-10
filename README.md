@@ -1,6 +1,6 @@
 # COMO FUNCIONA A RÉPLICA NO HQBIRD
 
-HÁ UM VÍDEO DISPONÍVEL NO YOUTUBE COM O PASSO A PASSA DA CONFIGURAÇÃO. [ACESSE AQUI!](https://www.youtube.com/watch?v=GdzeRQxoDgE)
+HÁ UM VÍDEO DISPONÍVEL NO YOUTUBE COM O PASSO A PASSO DA CONFIGURAÇÃO. [ACESSE AQUI!](https://www.youtube.com/watch?v=GdzeRQxoDgE)
 
 O hqbird permite dois tipos de replicação: síncrona e assíncrona. Nós recomendamos o uso da assíncrona pois ela não consome tanto processamento quanto a síncrona, e no caso de parada do servidor reserva, o modo síncrono impediria o funcionamento do banco, mesmo que o servidor principal esteja operando normalmente.
 Na replicação assíncrona, o serviço do firebird, no servidor principal, armazena as mudanças do  banco principal em arquivos segmentados, que são transferidos para um ou mais bancos definidos réplica.
