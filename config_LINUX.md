@@ -82,6 +82,28 @@ vim /etc/fstab
 - para as opções auto,\_netdev acesse o link [mount(8) - Linux man page](https://linux.die.net/man/8/mount)
 - 0 0 não será feito dump nem verificação na montagem
 
+### Montagem entre LINUX e WINDOWS
+No windows crie um usuário especifico para o compartilhamento, compartilhe a pasta de replica na rede, apenas para este usuário, e monte no linux.
+No linux, crie uma pasta para montagem com ownership de user e group do firebird.
+Adiciona as informações na fstab:
+```bash
+//192.168.0.114/replica /sky/replica cifs auto,_netdev,credentials=<arquivo>,gid=<firebird group ID>,uid=<firebird user ID> 0 0
+```
+- **192.168.0.114**: IP do servidor windows
+- **/replica**: Caminho de rede para a pasta Log Archive directory no servidor windows
+- **/sky/replica**: Caminho para a pasta Log Archive directory no servidor linux
+- **credentials=**: caminho para arquivo com user e senha do smb
+- **gid=,uid=**: Informar ID do usuário firebird
+
+Para pegar a ID do usuario firebird
+```bash
+id firebird
+```
+O arquivo credencial deve conter as credenciais do usuario windows usado no compartilhamento. Apenas o usuário root deve ter permissão de ler o arquivo.
+```bash
+username=user
+password=senha
+```
 
 # CONFIGURANDO ACESSO SSH POR PAR DE CHAVES
 
