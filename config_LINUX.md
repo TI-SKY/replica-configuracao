@@ -5,11 +5,11 @@
 Criar a estrutura de pastas, sugerimos dentro da pasta sky
 NO SERVER **PRINCIPAL**:
 ```bash
-mkdir -m 777 /sky/replica /sky/replicatemp
+mkdir /sky/replica /sky/replicatemp && chown firebird.firebird /sky/replica /sky/replicatemp
 ```
 NO SERVER **REPLICA**:
 ```bash
-mkdir -m 777 /sky/replica
+mkdir /sky/replica && chown firebird.firebird /sky/replica
 ```
 A pasta **replica** será disponibilizada na rede, nela será armazenado os arquivos do **Log arquive Directory**.
 A pasta **replicatemp** não precisa estar disponível na rede e armazenará os arquivos do **Log Directory**.
