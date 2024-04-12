@@ -14,7 +14,6 @@ Abaixo podemos ver a estrutura das pastas, onde o firebird MASTER copia as infor
 Se a replicação estiver funcionando corretamente estas pastas vão estar com apenas UM arquivo. Percebe-se que a pasta do banco notar está com dois arquivos. Isso se deve ao fato de que o serviço primeiro copia o arquivo **.arch** e depois extrai as informações para o arquivo {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}. Assim que as informações são extraídas ele exclui o arquivo **.arch**, mantendo apenas o outro arquivo na pasta.
 
 # ATENÇÃO
-# ATENÇÃO
 # ATENÇÃO DETALHES DO HQ 2024
 
 A réplica assíncrona funciona gerando arquivos a partir das modificações do banco principal, que devem ser acessadas pelo servidor do firebird réplica com o objeto de inserir as modificações no banco réplica.
@@ -24,6 +23,17 @@ O HqBird possuí um server FTP que pode ser facilmente configurado e utilizado p
 Essa configuração não é abordada nesse tutorial, mas pode ser explorada como uma opção.
 
 Outro detalhe do HqBird 2024 é que ao registrar um banco, ele da opção de já configurá-lo como replica ou master. A sugestão é adicioná-lo como nenhuma das opções e configurar manualmente depois.
+
+Ao gerar a cópia do banco a partir do botão `reinitialize replica database` pode ser que a cópia não fique configurada no modo réplica, mas basta configurar manualmente.
+No banco principal rode o comando
+
+`gstat -h banco.db`
+
+E procure o valor do "Database GUID"
+
+Pegue o valor dessa chave e rode o comando no BANCO DE RÉPLICA
+
+`gfix -replica {<Database GUID>} banco-replica.db -user sysdba -pass sysdbapass`
 
 ### REGISTRANDO UM BANCO NO HQBIRD
 
