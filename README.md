@@ -19,9 +19,11 @@ Se a replicação estiver funcionando corretamente estas pastas vão estar com a
 
 A réplica assíncrona funciona gerando arquivos a partir das modificações do banco principal, que devem ser acessadas pelo servidor do firebird réplica com o objeto de inserir as modificações no banco réplica.
 Existem várias maneiras de tornar esses arquivos acessíveis no servidor reserva, aqui sugerimos o uso de compartilhamento nfs ou smb, mas no hqbird 2024 foi facilitado o compartilhamento utilizando FTP dentro do próprio HqBidr.
+
 O HqBird possuí um server FTP que pode ser facilmente configurado e utilizado para transmitir os arquivos de replicação entre os servidores.
 Essa configuração não é abordada nesse tutorial, mas pode ser explorada como uma opção.
-Outro detalhe do HqBird 2024 é que ao registrar um banco, ele da opção de já configurá-lo como replica ou master. A sugestão é adicioná-lo como nenhum das opções e configurar manualmente depois.
+
+Outro detalhe do HqBird 2024 é que ao registrar um banco, ele da opção de já configurá-lo como replica ou master. A sugestão é adicioná-lo como nenhuma das opções e configurar manualmente depois.
 
 ### REGISTRANDO UM BANCO NO HQBIRD
 
