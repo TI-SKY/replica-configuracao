@@ -1,4 +1,4 @@
-# CONFIGURANDO REPLICAÇÂO COM USO DE FTP
+# CONFIGURANDO REPLICAÇÃO COM USO DE FTP
 O funcionamento da replicação é idêntico, porém a transferência dos arquivos de 'Segmentos de Replicação' será feita através de um server FTP.
 
 O próprio HQBird possui um server FTP interno que gerencia o envio e exclusão dos arquivos.
