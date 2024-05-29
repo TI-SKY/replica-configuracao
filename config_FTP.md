@@ -54,6 +54,7 @@ NO SERVER PRINCIPAL!
 - ( 2.1 ) 1 Caminho da Pasta `Log archive directory` da replicação (onde são gerados os arquivos que são inseridos no banco replica)
 - ( 2.2 ) 2 Habilitar/Desabilitar senha de compressão (essa senha precisa ser informada na configuração do hqbird replica em File Receiver)
 - ( 2.3 ) 3 Clicar para configurar informações do server FTP
+- ( 2.3 ) 4 Quantidde de segmentos antigos para manter na pasta após enviar, padrão é 10, pode baixar pra 5
 
 
 ![FTP003](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003.png)
