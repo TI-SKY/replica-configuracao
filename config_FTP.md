@@ -46,7 +46,7 @@ Como opção, pode-se bloquear todo o acesso no firewall, liberando apenas para 
 
 
 ## Passo 2: Configurar/Habilitar a replicação do banco principal
-É interessante que antes que seja gerada a cópia do banco, já tenhamos a configuração de envio dos arquivos pronta. Assim, quando o banco for reinicializado (gerada a cópia) ele já será enviado pelo FTP para o servidor reserva.
+É interessante que antes que seja gerada a cópia do banco, já tenhamos a configuração de envio dos arquivos pronta (Passo 3). Assim, quando o banco for reinicializado (gerada a cópia) ele já será enviado pelo FTP para o servidor reserva.
 Tela já conhecida.
 
 ![FTP004](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP004.png)
@@ -57,9 +57,11 @@ NO SERVER PRINCIPAL!
 - ( 2.3 ) A pasta `Log Archive Directory`
 - ( 2.4 ) Procurar por tabelas sem PK
 - ( 2.5 ) Salvar as configs
-- ( 2.6 ) Gerar a cópia do banco, PARA CONFIGURAÇÕES INICIAIS OBRIGATÓRIO FAZER SOMENTE APÓS REINICIAR O SERVIÇO DO FIREBIRD
+- ( 2.ATENÇÃO ) Gerar a cópia do banco, PARA CONFIGURAÇÕES INICIAIS OBRIGATÓRIO FAZER SOMENTE APÓS REINICIAR O SERVIÇO DO FIREBIRD
  
  > O BANCO SÓ COMEÇARÁ A GERAR OS ARQUIVOS APÓS REINICIAR O SERVIÇO DO FIREBIRD
+
+ > GERE A CÓPIA DEPOIS DE REALIZAR O PASSO 3
 
  > **INFO:** Note que com a configuração do envio de arquivos já realizada, após completar a cópia do banco o mesmo será automaticamente enviado por FTP pro servidor replica e estará disponível na pasta informada no item 2.8 do servidor reserva (/opt/hqbird/outdataguard/FTP/) ![FTP004-1](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP004-1.png)
 
