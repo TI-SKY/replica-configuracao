@@ -102,7 +102,8 @@ NO SERVER RESERVA!
 - ( 4.4 ) No painel do hq selecione o banco e clique em `File Receiver`
 - ( 4.5 ) 1 Informe o caminho da pasta para os segmentos de replicação do banco no server FTP, note que o caminho padrão já é `/opt/hqbird/outdataguard/FTP/`, então basta informar a pasta do banco no final.
 - ( 4.6 ) 2 Informe o caminho para o `Log Archive Directory` no server replica. Ex: `/sky/replica/banco`
-- ( 4.7 ) Verificar se os arquivos estão sendo enviados para a pasta `Log Archive Directory`
+- ( 4.7 ) Senha criada no item 3.2
+- ( 4.8 ) Verificar se os arquivos estão sendo enviados para a pasta `Log Archive Directory`
 
 ## Passo 5: Configurar/Habilitar a replicação do banco replica
 
