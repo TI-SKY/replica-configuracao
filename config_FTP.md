@@ -81,9 +81,9 @@ NO SERVER PRINCIPAL!
 
 NO SERVER PRINCIPAL!
 - ( 3.4 ) 1 IP FTP Server (IP de acesso para o server replica)
-- ( 3.5 ) 2 Porta FTP Server
-- ( 3.6 ) 3 Usuario FTP - sky
-- ( 3.7 ) 4 Senha do usuario (Configurado no item 1.4)
+- ( 3.5 ) 2 Porta FTP Server (Configurada no item 1.2, confirmar qual porta foi usada no IP Público)
+- ( 3.6 ) 3 Usuario FTP - sky (Configurada no item 1.3)
+- ( 3.7 ) 4 Senha do usuario (Configurada no item 1.4)
 - ( 3.8 ) 5 Pasta do server FTP que receberá os arquivos, informar a pasta criada para o banco no item 1.6. (Pasta criada no diretório /opt/hqbird/outdataguard/FTP/ do server reserva, NÃO PRECISA INFORMAR TODO O CAMINHO, SÓ A PASTA FINAL)
 - ( 3.9 ) 6 Podemos testar a comunicação FTP clicando em `Check FTP`, caso o servidor esteja disponível, alcançável e as credenciais OK, será criado um .txt na pasta informada do server FTP.
 ![FTP003-1](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003-1.png)
