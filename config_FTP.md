@@ -44,51 +44,50 @@ Para uso do modo passivo as portas passivas também precisam ser redirecionadas.
 Como opção, pode-se bloquear todo o acesso no firewall, liberando apenas para o ip público do servidor do banco de dados.
 ![FW001](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FW001.jpeg)
 
-## Passo 2: Configurar o envio dos arquivos
-É interessante que antes que seja configurada e habilitada a replicação de fato, já tenhamos a configuração de envio dos arquivos pronta. Assim, quando o banco for reinicializado (gerada a cópia) ele já será enviado pelo FTP para o servidor reserva.
-Selecionar o banco desejado e ir na configuração de `Transfer Replication Segments`
 
-![FTP002](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP002.png)
-
-NO SERVER PRINCIPAL!
-- ( 2.1 ) 1 Caminho da Pasta `Log archive directory` da replicação (onde são gerados os arquivos que são inseridos no banco replica)
-- ( 2.2 ) 2 Habilitar/Desabilitar senha de compressão (essa senha precisa ser informada na configuração do hqbird replica em File Receiver)
-- ( 2.3 ) 3 Clicar para configurar informações do server FTP
-- ( 2.3 ) 4 Quantidde de segmentos antigos para manter na pasta após enviar, padrão é 10, pode baixar pra 5
-
-
-![FTP003](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003.png)
-
-NO SERVER PRINCIPAL!
-- ( 2.4 ) 1 IP FTP Server (IP de acesso para o server replica)
-- ( 2.5 ) 2 Porta FTP Server
-- ( 2.6 ) 3 Usuario FTP - sky
-- ( 2.7 ) 4 Senha do usuario (Configurado no item 1.4)
-- ( 2.8 ) 5 Pasta do server FTP que receberá os arquivos, informar a pasta criada para o banco no item 1.6. (Pasta criada no diretório /opt/hqbird/outdataguard/FTP/ do server reserva, NÃO PRECISA INFORMAR TODO O CAMINHO, SÓ A PASTA FINAL)
-- ( 2.9 ) 6 Podemos testar a comunicação FTP clicando em `Check FTP`, caso o servidor esteja disponível, alcançável e as credenciais OK, será criado um .txt na pasta informada do server FTP.
-![FTP003-1](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003-1.png)
-
-## Passo 3: Configurar/Habilitar a replicação do banco principal
-
+## Passo 2: Configurar/Habilitar a replicação do banco principal
+É interessante que antes que seja gerada a cópia do banco, já tenhamos a configuração de envio dos arquivos pronta. Assim, quando o banco for reinicializado (gerada a cópia) ele já será enviado pelo FTP para o servidor reserva.
 Tela já conhecida.
 
 ![FTP004](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP004.png)
 
 NO SERVER PRINCIPAL!
-- ( 3.1) Clique no botão para configurar replicação do banco
-- ( 3.2 ) Pasta `Log directory`
-- ( 3.3 ) A pasta `Log Archive Directory` deverá ser a mesma informada no item 2.1
-- ( 3.4 ) Procurar por tabelas sem PK
-- ( 3.5 ) Salvar as configs
-- ( 3.6 ) Gerar a cópia do banco, PARA CONFIGURAÇÕES INICIAIS OBRIGATÓRIO FAZER SOMENTE APÓS REINICIAR O SERVIÇO DO FIREBIRD
+- ( 2.1) Clique no botão para configurar replicação do banco
+- ( 2.2 ) Pasta `Log directory`
+- ( 2.3 ) A pasta `Log Archive Directory`
+- ( 2.4 ) Procurar por tabelas sem PK
+- ( 2.5 ) Salvar as configs
+- ( 2.6 ) Gerar a cópia do banco, PARA CONFIGURAÇÕES INICIAIS OBRIGATÓRIO FAZER SOMENTE APÓS REINICIAR O SERVIÇO DO FIREBIRD
  
  > O BANCO SÓ COMEÇARÁ A GERAR OS ARQUIVOS APÓS REINICIAR O SERVIÇO DO FIREBIRD
 
  > **INFO:** Note que com a configuração do envio de arquivos já realizada, após completar a cópia do banco o mesmo será automaticamente enviado por FTP pro servidor replica e estará disponível na pasta informada no item 2.8 do servidor reserva (/opt/hqbird/outdataguard/FTP/) ![FTP004-1](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP004-1.png)
 
+## Passo 3: Configurar o envio dos arquivos
+Selecionar o banco desejado e ir na configuração de `Transfer Replication Segments`
+
+![FTP002](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP002.png)
+
+NO SERVER PRINCIPAL!
+- ( 3.1 ) 1 Caminho da Pasta `Log archive directory` da replicação (onde são gerados os arquivos que são inseridos no banco replica, deverá ser a mesma informada no item 2.3)
+- ( 3.2 ) 2 Habilitar/Desabilitar senha de compressão (essa senha precisa ser informada na configuração do hqbird replica em File Receiver)
+- ( 3.3 ) 3 Clicar para configurar informações do server FTP
+- ( 3.3 ) 4 Quantidde de segmentos antigos para manter na pasta após enviar, padrão é 10, pode baixar pra 5
+
+
+![FTP003](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003.png)
+
+NO SERVER PRINCIPAL!
+- ( 3.4 ) 1 IP FTP Server (IP de acesso para o server replica)
+- ( 3.5 ) 2 Porta FTP Server
+- ( 3.6 ) 3 Usuario FTP - sky
+- ( 3.7 ) 4 Senha do usuario (Configurado no item 1.4)
+- ( 3.8 ) 5 Pasta do server FTP que receberá os arquivos, informar a pasta criada para o banco no item 1.6. (Pasta criada no diretório /opt/hqbird/outdataguard/FTP/ do server reserva, NÃO PRECISA INFORMAR TODO O CAMINHO, SÓ A PASTA FINAL)
+- ( 3.9 ) 6 Podemos testar a comunicação FTP clicando em `Check FTP`, caso o servidor esteja disponível, alcançável e as credenciais OK, será criado um .txt na pasta informada do server FTP.
+![FTP003-1](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003-1.png)
+
 
 ## Passo 4: Configurar o recebimento dos arquivos
-
 
 ![FTP005](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP005.png)
 
