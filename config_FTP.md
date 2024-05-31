@@ -89,33 +89,34 @@ NO SERVER PRINCIPAL!
 ![FTP003-1](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP003-1.png)
 
 
-## Passo 4: Configurar o recebimento dos arquivos
-
-![FTP005](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP005.png)
-
-Com o banco já disponível em sua respectiva pasta no diretório `/opt/hqbird/outdataguard/FTP/`
-
-NO SERVER RESERVA!
-- ( 4.1 ) Verificar se o banco e os segmentos de replicação estão disponíveis na pasta `/opt/hqbird/outdataguard/FTP/banco`
-- ( 4.2 ) Mova a cópia do banco para a pasta dados do server replica, verifique as permissões e use o `gstat -h` para confirmar o modo de replicação.
-- ( 4.3 ) Adicione o banco no painel hqbird do reserva, NÃO configure já como replica para não assumir valores padrões.
-- ( 4.4 ) No painel do hq selecione o banco e clique em `File Receiver`
-- ( 4.5 ) 1 Informe o caminho da pasta para os segmentos de replicação do banco no server FTP, note que o caminho padrão já é `/opt/hqbird/outdataguard/FTP/`, então basta informar a pasta do banco no final.
-- ( 4.6 ) 2 Informe o caminho para o `Log Archive Directory` no server replica. Ex: `/sky/replica/banco`
-- ( 4.7 ) Senha criada no item 3.2
-- ( 4.8 ) Verificar se os arquivos estão sendo enviados para a pasta `Log Archive Directory`
-
-## Passo 5: Configurar/Habilitar a replicação do banco replica
+## Passo 4: Configurar/Habilitar a replicação do banco replica
 
 Agora que já estamos enviando os segmentos de replicação do server principal, recebendo-os no server replica, e tendo-os disponíveis na pasta `Log Archive Directory`, vamos concluir a replicação.
 
 ![FTP006](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP006.png)
 
 NO SERVER RESERVA!
-- ( 5.1 ) Clique no botão para configurar replicação do banco
-- ( 5.2 ) Informe a pasta `Log Archive Directory` do banco criada no item 1.7. Ex: `/sky/replica/banco`
-- ( 5.3 ) Reiniciar o serviço do firebird reserva
-- ( 5.4 ) Verificar se os arquivos da pasta `Log Archive Directory` estão sendo consumidos.
+- ( 4.1 ) Clique no botão para configurar replicação do banco
+- ( 4.2 ) Informe a pasta `Log Archive Directory` do banco criada no item 1.7. Ex: `/sky/replica/banco`
+- ( 4.3 ) Reiniciar o serviço do firebird reserva
+- ( 4.4 ) Verificar se os arquivos da pasta `Log Archive Directory` estão sendo consumidos.
+
+
+## Passo 5: Configurar o recebimento dos arquivos
+
+![FTP005](https://github.com/TI-SKY/replica-configuracao/blob/main/imagens_e_anexos/FTP005.png)
+
+Com o banco já disponível em sua respectiva pasta no diretório `/opt/hqbird/outdataguard/FTP/`
+
+NO SERVER RESERVA!
+- ( 5.1 ) Verificar se o banco e os segmentos de replicação estão disponíveis na pasta `/opt/hqbird/outdataguard/FTP/banco`
+- ( 5.2 ) Mova a cópia do banco para a pasta dados do server replica, verifique as permissões e use o `gstat -h` para confirmar o modo de replicação.
+- ( 5.3 ) Adicione o banco no painel hqbird do reserva, NÃO configure já como replica para não assumir valores padrões.
+- ( 5.4 ) No painel do hq selecione o banco e clique em `File Receiver`
+- ( 5.5 ) 1 Informe o caminho da pasta para os segmentos de replicação do banco no server FTP, note que o caminho padrão já é `/opt/hqbird/outdataguard/FTP/`, então basta informar a pasta do banco no final.
+- ( 5.6 ) 2 Informe o caminho para o `Log Archive Directory` no server replica. Ex: `/sky/replica/banco`. Item 4.2
+- ( 5.7 ) 3 Senha criada no item 3.2
+- ( 5.8 ) Verificar se os arquivos estão sendo enviados para a pasta `Log Archive Directory`
 
 # PRONTO
 
