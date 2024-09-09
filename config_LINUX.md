@@ -171,8 +171,8 @@ Caso possua os arquivos id_rsa e id_rsa.pub, pode utilizar as chaves já existen
 
 As chaves são salvas por padrão em ~/.ssh/
 Serão criadas duas chaves
-- id_rsa - pública
-- id_rsa.pub - privada
+- id_rsa - privada
+- id_rsa.pub - pública
 
 A pública deverá ser adicionada no arquivo ~/.ssh/authorized_keys do nosso server (destino). 
 Poderíamos ler o conteúdo da do arquivo /root/.ssh/id_rsa.pub na máquina client, usando o comando cat, copiá-lo e colá-lo no arquivo authorized_keys do usuário transferzito no server /home/transferzito/.ssh/authorized_keys
