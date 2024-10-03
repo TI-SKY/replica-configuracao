@@ -137,7 +137,7 @@ for i in *.?db; do gfix -replica {} -user sysdba -password PASS $i;done
 # Requisitos clientes de replicação
 
 - Sistema operacional atualizado e original
-- Linux (Ubuntu 20.04 Server LTS) Ubuntu 22 ainda não está homologado.
+- Linux (Ubuntu 20/22.04 Server LTS).
 - Windows (Windows Server 2016 ou superior)
 - Rede /1000 (Giga) em ambos servidores (estável)
 - Possuir um responsável técnico pela infraestrutura com contrato
