@@ -177,7 +177,7 @@ Serão criadas duas chaves
 A pública deverá ser adicionada no arquivo ~/.ssh/authorized_keys do nosso server (destino). 
 Poderíamos ler o conteúdo da do arquivo /root/.ssh/id_rsa.pub na máquina client, usando o comando cat, copiá-lo e colá-lo no arquivo authorized_keys do usuário transferzito no server /home/transferzito/.ssh/authorized_keys
 
-	Jamais devemos compartilhar a chave privada
+> Jamais devemos compartilhar a chave privada
 
 Mas a maneira mais fácil, seria usar o comando shh-copy-id, para copiarmos a chave pública (id_rsa.pub) do nosso usuário root, para as chaves autorizadas (authorized_keys) do nosso usuário transferzito.
 
@@ -196,7 +196,9 @@ No server (destino):
 ```bash
 vim /etc/ssh/sshd_config
 ```
-A opção **PubkeyAuthentication** deve estar em **yes**
+> A opção **PubkeyAuthentication** deve estar em **yes**.
+
+> Verificar se a opção **AllowUsers** está habilitada, caso positivo, adicione o usuario criado.
 
 Caso tenha sido necessário fazer a alteração, reinicie a configuração do server ssh.
 
